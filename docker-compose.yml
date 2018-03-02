@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  spring-boot-jpa-app:
+    image: spring-boot-rest-docker-image
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - 8087:8080
+    volumes:
+      - /data/spring-boot-app
